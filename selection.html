@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select the date details pookie ❤️</title>
+    <link rel = "stylesheet" href = "selection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        select, button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Time and food baby gurl?! ❤️</h2>
+
+    <div class="container">
+        <label for="time">Choose a Time:</label>
+        <select id="time">
+            <option value="6pm">6:00 PM</option>
+            <option value="7pm">7:00 PM</option>
+            <option value="8pm">8:00 PM</option>
+            <option value="9pm">9:00 PM</option>
+        </select>
+
+        <br>
+
+        <label for="food">Choose Food:</label>
+        <select id="food">
+            <option value="sushi">Sushi 🍣</option>
+            <option value="pizza">Pizza 🍕</option>
+            <option value="pasta">Pasta 🍝</option>
+            <option value="burgers">Burgers 🍔</option>
+        </select>
+
+        <br>
+
+        <label for="activity">Choose an activity:</label>
+        <select id="activity">
+            <option value="movie">Movie 🎥</option>
+            <option value="walk">Nahargarh sunset 🌅</option>
+            <option value="beach">Scooty ride 🛵</option>
+            <option value="park">Bowling 🎳</option>
+        </select>
+
+        <button onclick="confirmDate()">Confirm</button>
+        <button onclick="randomizeDate()">Surprise Me! 🎲</button>
+    </div>
+
+    <script>
+        function confirmDate() {
+            const time = document.getElementById("time").value;
+            const food = document.getElementById("food").value;
+            const activity = document.getElementById("activity").value;
+            alert(`So, we are going to meet at ${time} for ${food} and then go for a ${activity}. Sounds about right girlll? 😍`);
+            window.location.href = "final_page.html"; // You can create a final confirmation page
+        }
+        function randomizeDate() {
+            const times = ["6pm", "7pm", "8pm", "9pm"];
+            const foods = ["sushi", "pizza", "pasta", "burgers"];
+            const activities = ["movie", "bowling", "arcade", "walk", "stargazing"];
+
+            document.getElementById("time").value = times[Math.floor(Math.random() * times.length)];
+            document.getElementById("food").value = foods[Math.floor(Math.random() * foods.length)];
+            document.getElementById("activity").value = activities[Math.floor(Math.random() * activities.length)];
+        }
+    </script>
+
+</body>
+</html>
